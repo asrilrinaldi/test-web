@@ -205,7 +205,7 @@
             <form action="<?= base_url('admin/logout'); ?>" method="post">
                 <div class="modal-body">
                     <div class="modal-logout">
-                        Apakah ingin Keluar?
+                        Apakah yakin ingin keluar?
                     </div>
                 </div>
                 <div class="modal-footer">

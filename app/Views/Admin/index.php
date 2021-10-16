@@ -1,6 +1,6 @@
  <div class="text-center">
      <?php $session = session() ?>
-     <h3 class="h3 mb-4 text-gray-800">Halo <?= $judul ?> <?php echo $session->get('nama') ?> </h3>
+     <h3 class="h3 mb-4 text-gray-800">Halo <?= $judul ?> <?php echo $session->get('nama') ?> :)</h3>
  </div>
 
  <!-- TABEL TEACHER -->
@@ -22,7 +22,7 @@
              <?php endif;  ?>
 
              <div class="card">
-                 <h3 class="h3 mb-4 text-gray-800">Tabel Teacher</h3>
+                 <h3 class="h3 mb-4 text-gray-800">Tabel Teacher (Admin)</h3>
                  <div class="card-header">
                      <!-- button modal -->
                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#teacherTambah">
@@ -88,7 +88,7 @@
              <?php endif;  ?>
 
              <div class="card">
-                 <h3 class="h3 mb-4 text-gray-800">Tabel Student</h3>
+                 <h3 class="h3 mb-4 text-gray-800">Tabel Student (User)</h3>
                  <div class="card-header">
                      <!-- button modal -->
                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#studentTambah">
@@ -139,5 +139,3 @@
 
  </div>
  <!-- End of Main Content -->
-
- 

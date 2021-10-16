@@ -20,16 +20,16 @@ class Auth implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        // // jika user belum login
-        // if (!session()->get('logged_in')) {
-        //     // maka redirct ke halaman login
-        //     return redirect()->to('/login');
-        // }
-        if (session()->get('level') == "0") {
+        // jika user belum login
+        if (!session()->get('logged_in')) {
             // maka redirct ke halaman login
-            session()->setFlashdata('pesan', 'Tidak punya akses');
-            return redirect()->to('login');
+            return redirect()->to('/login');
         }
+        // if (session()->get('level') == "0") {
+        //     // maka redirct ke halaman login
+        //     session()->setFlashdata('pesan', 'Tidak punya akses');
+        //     return redirect()->to('login');
+        // }
     }
 
     //--------------------------------------------------------------------

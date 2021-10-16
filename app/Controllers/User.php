@@ -2,12 +2,10 @@
 
 namespace App\Controllers;
 
-use App\Models\M_Auth;
-use App\Models\M_User;
-use App\Models\M_Admin;
+
 use App\Models\M_Student;
 use App\Models\M_Teacher;
-use App\Models\UsersModel;
+
 
 
 class User extends BaseController
@@ -38,6 +36,7 @@ class User extends BaseController
         echo view('templates/header', $data);
         echo view('templates/top_bar', $data);
         echo view('user/index', $data);
+        echo view('templates/modal', $data);
         echo view('templates/footer');
     }
 }
