@@ -20,24 +20,27 @@
                 <div class="card-body pb-0">
                     <div class="col-lg">
                         <h1>LOGIN</h1><br>
-                        <?php if (session()->getFlashdata('pesan')) : ?>
-                            <div class="alert alert-danger"><?= session()->getFlashdata('pesan') ?></div>
-                        <?php endif; ?>
-                        <?php if (session()->getFlashdata('sukses')) : ?>
-                            <div class="alert alert-info"><?= session()->getFlashdata('sukses') ?></div>
-                        <?php endif; ?>
+                        <?php if (session()->getFlashData('pesan')) :  ?>
+                            <div class="alert alert-danger alert-dismissible show fade" role="alert">
+                                <div class="alert-body">
+                                    <button class="close" data-dismiss="alert">x</button>
+                                    <b>Error!</b>
+                                    <?= session()->getFlashData('error') ?>
+                                </div>
+                            </div>>
+                        <?php endif;  ?>
 
-                        <form method="post" action="<?= base_url(); ?>/login/auth">
+                        <form method="post" action="<?= base_url(); ?>/login/cek_login">
                             <div class="form-group">
-                                <label class="form-label">Nama</label>
-                                <input type="text" class="form-control" name="nm" id="nm" placeholder="Nama" value="<?= set_value('nama') ?>">
+                                <label for="exampleInputEmail1">ID</label>
+                                <input type="text" class="form-control" name="id" id="id" placeholder="ID" required autofocus>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-control" name="pw" id="pw" placeholder="Password">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                             </div>
                             <div class="col text-center">
-                                <button type="submit" class="btn btn-primary">Login</button>
+                                <button type="submit" name="login" class="btn btn-primary">Login</button>
                             </div>
                         </form>
                     </div>

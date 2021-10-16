@@ -4,8 +4,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class M_Admin extends Model
+class M_User extends Model
 {
-    protected $table = 'mst_teacher';
+    protected $table = 'mst_student';
     protected $allowedFields = ['nama', 'password', 'level'];
 }
