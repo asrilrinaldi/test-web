@@ -42,6 +42,7 @@ class Admin extends Controller
     public function tambahTeacher()
     {
 
+
         $data = [
             'id' => $this->request->getPost('id'),
             'nama'  => $this->request->getPost('nama'),

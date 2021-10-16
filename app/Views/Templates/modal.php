@@ -12,15 +12,15 @@
                 <form action="<?= base_url('admin/tambahTeacher'); ?>" method="POST">
                     <div class="form-group mb-0">
                         <label for="id">ID</label><br>
-                        <input type="text" name="id" id="id" class="form-control" placeholder="Masukkan ID">
+                        <input type="text" name="id" id="id" class="form-control" placeholder="Masukkan ID" required>
                     </div><br>
                     <div class="form-group mb-0">
                         <label for="nama">Nama</label><br>
-                        <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama">
+                        <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama" required>
                     </div><br>
                     <div class="form-group mb-0">
                         <label for="password">Password</label><br>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password" required>
                     </div><br>
                     <div class="form-group mb-0">
                         <label for="level">Level</label><br>
@@ -51,15 +51,15 @@
                 <form action="<?= base_url('admin/tambahStudent'); ?>" method="POST">
                     <div class="form-group mb-0">
                         <label for="id">ID</label><br>
-                        <input type="text" name="id" id="id" class="form-control" placeholder="Masukkan ID">
+                        <input type="text" name="id" id="id" class="form-control" placeholder="Masukkan ID" required>
                     </div><br>
                     <div class="form-group mb-0">
                         <label for="nama">Nama</label><br>
-                        <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama">
+                        <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama" required>
                     </div><br>
                     <div class="form-group mb-0">
                         <label for="password">Password</label><br>
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password" required>
                     </div><br>
                     <div class="form-group mb-0">
                         <label for="level">Level</label><br>
