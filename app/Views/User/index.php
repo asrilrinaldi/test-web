@@ -3,69 +3,85 @@
     <h3 class="h3 mb-4 text-gray-800">Halo <?= $judul ?> <?php echo $session->get('nama') ?> </h3>
 </div>
 
-<!-- tabel student -->
-<div class="container-fluid">
-    <!-- Page Heading -->
+<!-- TABEL TEACHER -->
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="container-fluid">
+            <!-- Page Heading -->
 
-    <?php if (session()->get('pesan')) :  ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            Data Teacher <strong><?= session()->getFlashdata('pesan') ?></strong>
-        </div>
-        <script>
-            $("alert").alert();
-        </script>
-    <?php endif;  ?>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="h3 mb-4 text-gray-800">Tabel Teacher</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nama</th>
+                                <th>Password</th>
 
-    <div class="row">
-        <div class="col-md-6">
-            <?php
-            if (session()->get('err')) {
-                echo " <div class='alert alert-danger' role='alert'>" . session()->get('err') . " </div>";
-            }
-            ?>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <!-- button modal -->
-        </div>
-        <div class="card-body">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Id</th>
-                        <th>Nama</th>
-                        <th>Password</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $i = 1;  ?>
-                    <?php foreach ($teacher as $row) :  ?>
-                        <tr>
-                            <td scope="row"><?= $i; ?></td>
-                            <td><?= $row['id']; ?></td>
-                            <td><?= $row['nama']; ?></td>
-                            <td><?= $row['password']; ?></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($teacher as $row) :  ?>
+                                <tr>
+                                    <td><?= $row['id']; ?></td>
+                                    <td><?= $row['nama']; ?></td>
+                                    <td><?= $row['password']; ?></td>
+                                </tr>
+                            <?php endforeach;  ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
 
-                        </tr>
-                        <?php $i++;  ?>
-                    <?php endforeach;  ?>
-                </tbody>
-            </table>
+
         </div>
     </div>
-
-
-
 </div>
 <!-- /.container-fluid -->
+
+<!-- TABEL STUDENT -->
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="h3 mb-4 text-gray-800">Tabel Student</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nama</th>
+                                <th>Password</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($student as $row) :  ?>
+                                <tr>
+                                    <td><?= $row['id']; ?></td>
+                                    <td><?= $row['nama']; ?></td>
+                                    <td><?= $row['password']; ?></td>
+                                </tr>
+                            <?php endforeach;  ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->
+
 
 </div>
 <!-- End of Main Content -->

@@ -45,7 +45,6 @@
                          <th>Id</th>
                          <th>Nama</th>
                          <th>Password</th>
-                         <th>Level</th>
                          <th>Aksi</th>
                      </tr>
                  </thead>
@@ -57,7 +56,6 @@
                              <td><?= $row['id']; ?></td>
                              <td><?= $row['nama']; ?></td>
                              <td><?= $row['password']; ?></td>
-                             <td><?= $row['level']; ?></td>
                              <td>
                                  <button type="button" data-toggle="modal" data-target="#modalEdit" id="btn-edit" class="btn btn-sm btn-warning" data-id="<?= $row['id'] ?>" data-nama="<?= $row['nama'] ?>" data-password="<?= $row['password'] ?>" data-level="<?= $row['level'] ?>"> <i class="fa fa-edit"></i> </button>
                                  <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-sm btn-danger" data-id="<?= $row['id'] ?>"> <i class="fa fa-trash-alt"></i> </button>

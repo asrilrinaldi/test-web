@@ -42,9 +42,10 @@ class Admin extends Controller
 
     public function tambah()
     {
+
         $data = [
             'id' => $this->request->getPost('id'),
-            'nama' => $this->request->getPost('nama'),
+            'nama'  => $this->request->getPost('nama'),
             'password' => $this->request->getPost('password'),
             'level' => $this->request->getPost('level')
 

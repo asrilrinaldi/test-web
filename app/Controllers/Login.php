@@ -32,6 +32,8 @@ class Login extends BaseController
     public function auth()
     {
 
+
+
         $session = session();
         $userModel = new M_User();
         $adminModel = new M_Admin();

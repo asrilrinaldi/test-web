@@ -6,6 +6,7 @@ use App\Models\M_Auth;
 use App\Models\M_User;
 use App\Models\M_Admin;
 use App\Models\M_Student;
+use App\Models\M_Teacher;
 use App\Models\UsersModel;
 
 
@@ -19,7 +20,8 @@ class User extends BaseController
     protected $request;
     public function __construct()
     {
-        $this->model = new M_Student;
+        $this->model = new M_Teacher;
+        $this->model2 = new M_Student;
     }
     public function index()
     {
@@ -29,7 +31,8 @@ class User extends BaseController
 
         $data = [
             'judul' => 'User',
-            'teacher' => $this->model->getAllData()
+            'teacher' => $this->model->getAllData(),
+            'student' => $this->model2->getAllData()
         ];
 
         echo view('templates/header', $data);
