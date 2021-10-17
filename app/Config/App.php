@@ -420,7 +420,7 @@ class App extends BaseConfig
      *
      * @var bool
      */
-    public $CSRFRedirect = true;
+    public $CSRFRedirect = false;
 
     /**
      * --------------------------------------------------------------------------
