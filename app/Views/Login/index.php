@@ -28,7 +28,7 @@
                         <?php endif; ?>
 
                         <form method="post" action="<?= base_url(); ?>/login/auth">
-
+                            <?= csrf_field() ?>
                             <div class="form-group">
                                 <label class="form-label">Nama</label>
                                 <input type="text" class="form-control" name="nm" id="nm" placeholder="Nama" value="<?= set_value('nama') ?>">

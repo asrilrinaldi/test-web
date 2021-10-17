@@ -47,11 +47,11 @@ class Login extends BaseController
         if ($user) {
             if (empty($user) or empty($password)) {
                 session()->setFlashdata('pesan', 'Nama atau Password belum di isi');
-                return redirect()->to('/');
+                return redirect()->to('/login');
             }
             if ($user['password'] != $password) {
                 session()->setFlashdata('pesan', 'Nama atau Password Salah');
-                return redirect()->to('/');
+                return redirect()->to('/login');
             }
             session()->set('nama', $nama);
 
@@ -66,11 +66,11 @@ class Login extends BaseController
         } else {
             if (empty($admin) or empty($password)) {
                 session()->setFlashdata('pesan', 'Nama atau Password belum di isi');
-                return redirect()->to('/');
+                return redirect()->to('/login');
             }
             if ($admin['password'] != $password) {
                 session()->setFlashdata('pesan', 'Nama atau Password Salah');
-                return redirect()->to('/');
+                return redirect()->to('/login');
             }
             session()->set('nama', $nama);
 

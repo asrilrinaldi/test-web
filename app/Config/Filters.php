@@ -38,11 +38,18 @@ class Filters extends BaseConfig
             'auth' => ['except' => [
                 'login', 'login/*',
             ]],
-            // 'honeypot',
-            // 'csrf' => ['except' => [
-            //     'api/contact/save',
-            //     'api/contact/delete'
-            // ]],
+            'honeypot',
+            'csrf' => ['except' => [
+                '/login/auth',
+                '/admin/tambahTeacher',
+                '/admin/tambahStudent',
+                '/admin/editTeacher',
+                '/admin/editStudent',
+                '/admin/hapusTeacher',
+                '/admin/hapusStudent',
+                '/admin/logout'
+
+            ]],
 
         ],
         'after' => [
