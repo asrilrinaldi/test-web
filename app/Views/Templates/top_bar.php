@@ -48,7 +48,7 @@
                  <!-- <div class="dropdown-divider"></div> -->
                  <div class="modal-logout">
 
-                     <a data-toggle="modal" data-target="#modalLogout" id="btn-hapus" class="dropdown-item" href="/login/logout" data-toggle="modal" data-target="#modalLogout">
+                     <a data-toggle="modal" data-target="#modalLogout" id="btn-logout" class="dropdown-item" href="/login/logout" data-toggle="modal" data-target="#modalLogout">
                          <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                          Logout
                      </a>

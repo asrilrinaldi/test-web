@@ -22,7 +22,7 @@
      })
  </script>
  <script>
-     $(document).on('click', '#btn-hapus', function() {
+     $(document).on('click', '#btn-logout', function() {
          $('.modal-logout #id').val($(this).data('id'));
      })
  </script>
