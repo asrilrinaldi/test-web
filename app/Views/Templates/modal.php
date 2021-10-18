@@ -10,6 +10,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= base_url('admin/tambahTeacher'); ?>" method="POST">
+                    <?= csrf_field() ?>
                     <div class="form-group mb-0">
                         <label for="id">ID</label><br>
                         <input type="text" name="id" id="id" class="form-control" placeholder="Masukkan ID" required>
@@ -49,6 +50,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= base_url('admin/tambahStudent'); ?>" method="POST">
+                    <?= csrf_field() ?>
                     <div class="form-group mb-0">
                         <label for="id">ID</label><br>
                         <input type="text" name="id" id="id" class="form-control" placeholder="Masukkan ID" required>
@@ -90,6 +92,7 @@
             <div class="modal-body">
                 <div class="modal-edit">
                     <form action="<?= base_url('admin/editTeacher'); ?>" method="POST">
+                        <?= csrf_field() ?>
                         <input type="hidden" name="id" id="id">
                         <div class="form-group mb-0">
                             <label for="nama">Nama</label><br>
@@ -128,6 +131,7 @@
             <div class="modal-body">
                 <div class="modal-edit">
                     <form action="<?= base_url('admin/editStudent'); ?>" method="POST">
+                        <?= csrf_field() ?>
                         <input type="hidden" name="id" id="id">
                         <div class="form-group mb-0">
                             <label for="nama">Nama</label><br>
